@@ -48,7 +48,31 @@ const displayData = data => {
 // });
 
 //Get users
+// http
+//   .get('https://jsonplaceholder.typicode.com/users')
+//   .then(data => displayData(data))
+//   .catch(err => console.log(err));
+
+//POST request
+const data = {
+  name: 'John Doe',
+  email: 'blah@derp.com',
+  username: 'johndoe'
+};
+
+// http
+//   .post('https://jsonplaceholder.typicode.com/users', data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+//Update post
+// http
+//   .put('https://jsonplaceholder.typicode.com/users/2', data)
+//   .then(data => console.log(data))
+//   .catch(err => console.log(err));
+
+//Delete post
 http
-  .get('https://jsonplaceholder.typicode.com/users')
-  .then(data => displayData(data))
+  .delete('https://jsonplaceholder.typicode.com/users/2')
+  .then(() => console.log(data))
   .catch(err => console.log(err));
