@@ -50,8 +50,9 @@ const displayData = data => {
 //Get users
 // http
 //   .get('https://jsonplaceholder.typicode.com/users')
-//   .then(data => displayData(data))
-//   .catch(err => console.log(err));
+//   .then(data => console.log(data))
+// .then(data => displayData(data))
+// .catch(err => console.log(err));
 
 //POST request
 const data = {
@@ -74,5 +75,5 @@ const data = {
 //Delete post
 http
   .delete('https://jsonplaceholder.typicode.com/users/2')
-  .then(() => console.log(data))
+  .then(data => console.log(data))
   .catch(err => console.log(err));
